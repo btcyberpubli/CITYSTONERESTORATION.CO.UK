@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Stone Restoration Ltd</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        header, main, footer {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 32px 24px;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            border-bottom: 4px solid #2980b9;
+            border-radius: 0 0 16px 16px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+        }
+        nav {
+            margin-top: 16px;
+        }
+        nav a {
+            color: #2980b9;
+            text-decoration: none;
+            font-weight: 600;
+            margin-right: 18px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #e67e22;
+        }
+        h1, h2, h3 {
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: 2.2em;
+            color: #2980b9;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        .subsection-title {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        section {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.08);
+            margin-bottom: 48px;
+            padding: 32px 24px;
+            border-left: 6px solid #2980b9;
+        }
+        ul, ol {
+            margin-left: 24px;
+        }
+        form label {
+            display: block;
+            margin-top: 12px;
+            color: #2980b9;
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        form button {
+            padding: 10px 24px;
+            background: #2980b9;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        form button:hover {
+            background: #e67e22;
+        }
+        .legal-block {
+            background: #f9f9f9;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+            border-left: 4px solid #2980b9;
+        }
+        .meta-data-block {
+            background: #eee;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+            font-family: monospace;
+            border-left: 4px solid #e67e22;
+        }
+        .hero-img {
+            width: 100%;
+            max-width: 900px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.15);
+            margin-bottom: 32px;
+        }
+        .gallery {
+            display: flex;
+            gap: 24px;
+            margin: 32px 0;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 30%;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+            object-fit: cover;
+        }
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #2980b9 0%, #e67e22 100%);
+            border: none;
+            margin: 32px 0;
+        }
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            border-radius: 16px 16px 0 0;
+            border-top: 4px solid #2980b9;
+            margin-top: 48px;
+            padding-bottom: 24px;
+            box-shadow: 0 -2px 12px rgba(44,62,80,0.08);
+        }
+    </style>
+        <style>
+            .hero-img {
+                width: 100%;
+                max-width: 900px;
+                border-radius: 16px;
+                box-shadow: 0 4px 24px rgba(44,62,80,0.15);
+                margin-bottom: 32px;
+            }
+            .gallery {
+                display: flex;
+                gap: 24px;
+                margin: 32px 0;
+                justify-content: center;
+            }
+            .gallery img {
+                width: 30%;
+                border-radius: 12px;
+                box-shadow: 0 2px 12px rgba(44,62,80,0.10);
+                object-fit: cover;
+            }
+        </style>
+    <script>
+        // UK Phone Number variable
+        const UK_PHONE_NUMBER = "+44 20 7420 8124";
+        function insertPhoneNumber() {
+            const phoneElements = document.querySelectorAll('.uk-phone');
+            phoneElements.forEach(el => el.textContent = UK_PHONE_NUMBER);
+        }
+        document.addEventListener('DOMContentLoaded', insertPhoneNumber);
+    </script>
+        <script type="module">
+            import { UK_PHONE_NUMBER } from './assets/config.js';
+            window.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.uk-phone').forEach(el => el.textContent = UK_PHONE_NUMBER);
+            });
+        </script>
+</head>
+<body>
+    <header>
+        <h1>City Stone Restoration Ltd</h1>
+        <p>15-17 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom</p>
+        <p>Phone: <span class="uk-phone"></span></p>
+        <p>Email: info@citystonerestoration.co.uk</p>
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#about">About Us</a> |
+            <a href="#services">Services</a> |
+            <a href="#contact">Contact</a> |
+            <a href="#terms">Terms and Conditions</a> |
+            <a href="#privacy">Privacy Policy</a> |
+            <a href="#cookie">Cookie Policy</a> |
+            <a href="#faq">FAQ</a> |
+            <a href="#legal">Legal Notice</a>
+        </nav>
+            <img src="assets/1.jpg" alt="Stone Restoration Example" class="hero-img">
+    </header>
+    <main>
+        <section id="home">
+            <h2 class="section-title">Home</h2>
+            <h3 class="subsection-title">Business Overview</h3>
+            <p>City Stone Restoration Ltd is a professional stone restoration company based in London, United Kingdom. We specialise in the restoration, cleaning, and maintenance of natural stone surfaces for commercial, residential, and heritage properties. Our operations are conducted with strict adherence to UK industry standards, ensuring the highest level of service and compliance.</p>
+            <h3 class="subsection-title">Services and Target Audience</h3>
+            <p>We offer a comprehensive range of stone restoration services, including cleaning, polishing, sealing, repair, and conservation of marble, granite, limestone, and other natural stones. Our clients include property managers, building owners, architects, contractors, and private homeowners seeking reliable and expert care for their stone surfaces.</p>
+            <h3 class="subsection-title">Value Proposition</h3>
+            <p>Our value lies in our commitment to quality, transparency, and customer satisfaction. We provide tailored solutions, clear communication, and full compliance with UK regulations. All service details, terms, and privacy policies are available for review to ensure transparency and trust.</p>
+            <ul>
+                <li>For contact details, see the <a href="#contact">Contact</a> section.</li>
+                <li>For legal information, see <a href="#terms">Terms and Conditions</a> and <a href="#privacy">Privacy Policy</a>.</li>
+            </ul>
+                <div class="gallery">
+                    <img src="assets/2.jpg" alt="Restoration Project 2">
+                    <img src="assets/3.jpg" alt="Restoration Project 3">
+                </div>
+        </section>
+        <section id="about">
+            <h2 class="section-title">About Us</h2>
+            <h3 class="subsection-title">Company Background</h3>
+            <p>City Stone Restoration Ltd was established to address the growing need for professional stone care in the United Kingdom. With our registered office in Covent Garden, London, we operate as a fully compliant UK business, dedicated to delivering reliable and high-quality restoration services.</p>
+            <h3 class="subsection-title">Mission, Values, and Professional Standards</h3>
+            <p>Our mission is to preserve and enhance the beauty of natural stone surfaces while maintaining the highest standards of professionalism and integrity. We value transparency, accountability, and respect for our clients and their properties. Our team is trained to uphold strict ethical and operational standards, ensuring every project is completed to specification and in accordance with UK regulations.</p>
+            <h3 class="subsection-title">Operational Approach and Service Philosophy</h3>
+            <p>We employ a systematic approach to stone restoration, beginning with a thorough assessment, followed by tailored treatment plans and meticulous execution. Our internal processes are designed to ensure safety, efficiency, and minimal disruption to our clients. We believe in proactive communication and continuous improvement, adapting our methods to meet evolving industry standards.</p>
+            <h3 class="subsection-title">Sector Experience and Compliance Commitment</h3>
+            <p>With extensive experience in the stone restoration sector, we have successfully completed projects for commercial buildings, residential complexes, and heritage sites. Our commitment to compliance and trust is reflected in our adherence to UK laws, industry best practices, and client confidentiality.</p>
+        </section>
+        <section id="services">
+            <h2 class="section-title">Services</h2>
+            <h3 class="subsection-title">Service Portfolio</h3>
+            <ul>
+                <li>Stone Cleaning: Removal of stains, dirt, and biological growth from all types of natural stone surfaces.</li>
+                <li>Stone Polishing: Restoration of shine and smoothness to marble, granite, and other stones.</li>
+                <li>Stone Sealing: Application of protective sealants to prevent staining and prolong surface life.</li>
+                <li>Stone Repair: Fixing chips, cracks, and other damage to stone surfaces.</li>
+                <li>Stone Conservation: Specialist care for heritage and listed buildings, ensuring preservation of original materials.</li>
+            </ul>
+            <h3 class="subsection-title">Scope and Exclusions</h3>
+            <p>Our services cover interior and exterior stone surfaces in commercial, residential, and heritage properties. We do not undertake structural repairs, installation of new stone, or services outside the United Kingdom.</p>
+            <h3 class="subsection-title">Service Delivery</h3>
+            <p>All services are delivered by trained professionals using industry-approved methods and equipment. We provide detailed quotations, clear timelines, and post-service care instructions. Clients are responsible for providing access to the property and ensuring the area is prepared for restoration work.</p>
+            <h3 class="subsection-title">Quality Standards and Compliance</h3>
+            <p>We adhere to UK health and safety regulations, environmental standards, and industry codes of practice. Our work is regularly audited for quality assurance, and we maintain comprehensive insurance coverage for all projects.</p>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <h3 class="subsection-title">Registered Office</h3>
+            <p>15-17 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom</p>
+            <h3 class="subsection-title">Phone</h3>
+            <p><span class="uk-phone"></span></p>
+            <h3 class="subsection-title">Email</h3>
+            <p>info@citystonerestoration.co.uk</p>
+            <h3 class="subsection-title">Contact Form</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <h3 class="subsection-title">Business Hours</h3>
+            <p>Monday to Friday: 09:00 – 18:00<br>Saturday: 10:00 – 14:00<br>Sunday and Bank Holidays: Closed</p>
+            <h3 class="subsection-title">Estimated Response Times</h3>
+            <p>We aim to respond to all enquiries within one business day. For urgent matters, please call our office during business hours.</p>
+        </section>
+        <section id="terms">
+            <h2 class="section-title">Terms and Conditions</h2>
+            <h3 class="subsection-title">Website Use</h3>
+            <p>This website is operated by City Stone Restoration Ltd. By accessing and using this website, you agree to comply with these Terms and Conditions. If you do not agree, please refrain from using the site.</p>
+            <h3 class="subsection-title">User Obligations</h3>
+            <ul>
+                <li>Users must provide accurate information when contacting us.</li>
+                <li>Users must not misuse the website or attempt to compromise its security.</li>
+                <li>Users must respect intellectual property rights and refrain from unauthorised use of content.</li>
+            </ul>
+            <h3 class="subsection-title">Company Responsibilities and Limitations</h3>
+            <p>City Stone Restoration Ltd endeavours to ensure the accuracy of information on this website but does not guarantee its completeness or reliability. We are not liable for any direct or indirect damages arising from the use of this site or our services.</p>
+            <h3 class="subsection-title">Service Disclaimers</h3>
+            <p>All services are subject to availability and assessment. Quotations are provided based on site inspection and may be subject to change. We do not guarantee results beyond reasonable professional standards.</p>
+            <h3 class="subsection-title">Applicable Law</h3>
+            <p>These Terms and Conditions are governed by the laws of the United Kingdom. Any disputes shall be subject to the exclusive jurisdiction of UK courts.</p>
+        </section>
+        <section id="privacy">
+            <h2 class="section-title">Privacy Policy</h2>
+            <h3 class="subsection-title">Personal Data Collected</h3>
+            <p>We collect personal data such as names, contact details, and correspondence provided via our contact form, email, or telephone. We do not collect sensitive personal data unless required for service provision.</p>
+            <h3 class="subsection-title">Legal Basis for Processing</h3>
+            <p>Data is processed in accordance with the UK GDPR, based on consent, contractual necessity, or legitimate interest. We only process data necessary for service delivery and communication.</p>
+            <h3 class="subsection-title">Use, Storage, and Retention</h3>
+            <p>Personal data is used solely for responding to enquiries, providing services, and maintaining records. Data is stored securely and retained for as long as necessary to fulfil contractual and legal obligations.</p>
+            <h3 class="subsection-title">Information Security Measures</h3>
+            <p>We implement appropriate technical and organisational measures to protect personal data against unauthorised access, alteration, or loss. Access to data is restricted to authorised personnel only.</p>
+            <h3 class="subsection-title">User Rights under UK GDPR</h3>
+            <ul>
+                <li>Right to access personal data</li>
+                <li>Right to rectification</li>
+                <li>Right to erasure</li>
+                <li>Right to restrict processing</li>
+                <li>Right to data portability</li>
+                <li>Right to object</li>
+            </ul>
+            <h3 class="subsection-title">Privacy Contact Details</h3>
+            <p>For privacy enquiries, please contact: info@citystonerestoration.co.uk</p>
+        </section>
+        <section id="cookie">
+            <h2 class="section-title">Cookie Policy</h2>
+            <h3 class="subsection-title">Types of Cookies Used</h3>
+            <ul>
+                <li>Essential Cookies: Required for website functionality and security.</li>
+                <li>Performance Cookies: Used to analyse website usage and improve user experience.</li>
+                <li>Functionality Cookies: Enable enhanced features and personalisation.</li>
+            </ul>
+            <h3 class="subsection-title">Purpose of Each Category</h3>
+            <p>Essential cookies ensure the website operates securely and efficiently. Performance cookies help us understand visitor behaviour to optimise our services. Functionality cookies allow us to remember user preferences and provide a tailored experience.</p>
+            <h3 class="subsection-title">Consent Management</h3>
+            <p>Users are informed about cookie usage upon visiting the site. Consent for non-essential cookies is obtained via browser settings or explicit acceptance. Users may manage cookie preferences at any time.</p>
+            <h3 class="subsection-title">UK Compliance</h3>
+            <p>Our cookie policy complies with UK regulations, including the Privacy and Electronic Communications Regulations (PECR) and UK GDPR.</p>
+        </section>
+        <section id="faq">
+            <h2 class="section-title">FAQ</h2>
+            <h3 class="subsection-title">Service Questions</h3>
+            <ul>
+                <li><strong>What types of stone do you restore?</strong><br>We restore marble, granite, limestone, and other natural stones for commercial, residential, and heritage properties.</li>
+                <li><strong>How do I request a quotation?</strong><br>You may contact us via the contact form, email, or telephone. A site assessment is required for accurate quotations.</li>
+                <li><strong>Do you provide services outside London?</strong><br>Our services are available throughout the United Kingdom, subject to project scope and feasibility.</li>
+            </ul>
+            <h3 class="subsection-title">Privacy and Data Protection</h3>
+            <ul>
+                <li><strong>How is my personal data protected?</strong><br>We use secure systems and restrict access to authorised personnel only. See our Privacy Policy for details.</li>
+                <li><strong>Can I request deletion of my data?</strong><br>Yes, you may request erasure of your personal data at any time by contacting us.</li>
+            </ul>
+            <h3 class="subsection-title">Billing, Contact, and Support</h3>
+            <ul>
+                <li><strong>How do I pay for services?</strong><br>Payment terms are provided with each quotation. We accept bank transfers and other standard UK payment methods.</li>
+                <li><strong>What is the response time for enquiries?</strong><br>We aim to respond within one business day.</li>
+                <li><strong>How can I get support?</strong><br>Contact us via phone or email during business hours for assistance.</li>
+            </ul>
+        </section>
+        <section id="legal">
+            <h2 class="section-title">Legal Notice</h2>
+            <div class="legal-block">
+                <h3 class="subsection-title">Business Identification</h3>
+                <p>Legal Business Name: City Stone Restoration Ltd</p>
+                <p>Registered Address: 15-17 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom</p>
+                <p>Phone: <span class="uk-phone"></span></p>
+                <p>Email: info@citystonerestoration.co.uk</p>
+                <h3 class="subsection-title">Ownership and Responsibility</h3>
+                <p>This website is owned and operated by City Stone Restoration Ltd. All content and services are provided in accordance with UK law. The company assumes responsibility for the accuracy and legality of information presented herein.</p>
+                <h3 class="subsection-title">Jurisdiction</h3>
+                <p>All legal matters relating to this website and its content are governed by the laws of the United Kingdom.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 City Stone Restoration Ltd. All rights reserved.</p>
+        <p>Registered in England and Wales. Company address: 15-17 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom</p>
+        <p>Phone: <span class="uk-phone"></span> | Email: info@citystonerestoration.co.uk</p>
+        <p>Website: https://citystonerestoration.co.uk</p>
+            <p style="font-size:1.1em;">&copy; 2025 City Stone Restoration Ltd. All rights reserved.</p>
+            <p>Registered in England and Wales. Company address: 15-17 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom</p>
+            <p>Phone: <span class="uk-phone"></span> | Email: info@citystonerestoration.co.uk</p>
+            <p>Website: https://citystonerestoration.co.uk</p>
+    </footer>
+    <div class="meta-data-block">
+        <strong>DATA FOR META VERIFICATION</strong><br><br>
+        Legal Business Name:
+        City Stone Restoration Ltd<br>
+        Business Address:
+        15-17 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom<br>
+        UK Phone Number:
+        +44 20 7420 8124<br>
+        Website URL:
+        https://citystonerestoration.co.uk
+    </div>
+</body>
+</html>
